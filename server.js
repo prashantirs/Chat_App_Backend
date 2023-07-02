@@ -23,7 +23,7 @@ io.on('connection', (socket ) => {
     socket.on('joined',({name})=>{
         users[socket.id] = name;
         // socket.emit('welcome',{message:`${name} Welcome to the chat at ${time}`});
-        socket.emit('welcome',{user: "Welcome",text:`${name} Welcome to the chat`,id:socket.id});
+        socket.emit('welcome',{user: "Welcome",text:`${name} Welcome! to the chat`,id:socket.id});
         // socket.broadcast.emit('newUser',{message:`${name} joined the chat at ${time}`});
         socket.broadcast.emit('newUser',{user: 'Admin',text:`${name} joined the chat`,id:socket.id});
     })
