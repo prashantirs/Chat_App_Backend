@@ -25,7 +25,7 @@ io.on('connection', (socket ) => {
         // socket.emit('welcome',{message:`${name} Welcome to the chat at ${time}`});
         socket.emit('welcome',{user: "Admin",text:`${name} Welcome to the chat`,id:socket.id});
         // socket.broadcast.emit('newUser',{message:`${name} joined the chat at ${time}`});
-        socket.broadcast.emit('newUser',{user: 'Admin',text:`${name}joined the chat`,id:socket.id});
+        socket.broadcast.emit('newUser',{user: 'Admin',text:`${name} joined the chat`,id:socket.id});
     })
 
     socket.on('disconnect', () => {
